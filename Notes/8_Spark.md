@@ -21,7 +21,7 @@
 
 
 ## Spark DataFrame
-- A DataFrame is a two-dimensional labeled data structure with columns of potentially different types
+- A DataFrame is a two-dimensional labelled data structure with columns of potentially different types
 - The Apache Spark DataFrame API provides a rich set of functions (select columns, filter, join, aggregate, and so on) that allow you to solve common data analysis problems efficiently. DataFrames also allow you to intermix operations seamlessly with custom Python, R, Scala, and SQL code
 - Data Sources API and Data Sources API
 - Dataframe is divided into logical partitions that are executed by different executors / slots, which allows parallel execution and fast results
