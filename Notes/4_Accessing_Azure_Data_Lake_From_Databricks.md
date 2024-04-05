@@ -36,9 +36,9 @@
 - use abfs (Azure Blob File System) driver to access data store in a storage account from Databricks
   - optimized for big data analytics
   - offers better security
-  - part of Apache Hadoop suite
+  - part of Apache Hadoop suite of products
 - URI scheme to access files in ADLS Gen2 using the abfs driver
-  -  abfs[s] - s ensures TLS transport layer security, data encyrpted while in transit
+  -  abfs[s] - s ensures TLS transport layer security, data encrypted while in transit
   - container
   - storage account endpoint
 
@@ -46,6 +46,7 @@
 
   <img src="Docs/abfs2.png">
 
+- In storage account gen2 dl, show access keys (2 access keys can be rotated)
 - successfully used the access key to authenticate to ADLS storage account and list files and read data
 - Using access keys gives full access to the storage account and is not suitable as it is best practice to restrict access and provide only the required access for users such as Read Access for a limited period of time
 
