@@ -57,10 +57,14 @@
 - Restrict access to specific time period
 - Limit access to specific IP addresses
 - Recommended access spatters for external clients
+- Types of shared access signatures:
+  - User delegation SAS - secured with Microsoft Entra credentials and applies to blob storage only
+  - Service SAS - secured with the storage account key and delegates access to a resource in only one of Blob storage, Queue storage, Table storage, or Azure files
+  - Account SAS - secured with the storage account key. An account SAS delegates access to resources in one or more of the storage services
 
 <img src="Docs/sas1.png">
 
-- generate SAS token in specific container in Azure portal, and assign SAS token to key, set permissions and start and expiry, set allowed IP addresses and protocols
+- generate SAS token in specific container in Azure portal so users have access to the container specified, and assign SAS token to key, set permissions and start and expiry, set allowed IP addresses and protocols
 - Copy and use Blob SAS token
 - successfully used SAS to authenticate to ADLS storage account and list files and read data
 - In Azure Storage Explorer, get shared access signature and generate a SAS token
@@ -79,7 +83,6 @@
 ## Session Scoped Authentication (previous access methods)
 
 <img src="Docs/session.png">
-
 
 - set spark configuration parameters with secrets in notebook
 - executed notebooks on cluster which uses secrets to authenticate to ADLS Gen2 and returned results / data requested
@@ -107,5 +110,5 @@
 - if user has required role assigned in RBAC Azure role-based access control, then user can access storage account
 - useful for multiple ML Engineers using the same cluster but each access only specific storage accounts
 - Enable credential passthrough for user-level data access (requires single user or shared access mode)
-- Add Storage Blob Data Contributor role assignment in data lake in Azure portal IAM and select member as user
+- Add Storage Blob Data Contributor role assignment for user that requires access in data lake in Azure portal IAM and select member as user
 - Successfully executed notebook to read data from ADLS container via authentication through AAD Credential Passthrough

@@ -16,10 +16,11 @@
 
 ### Creating Secret Scope
 - Managing secrets begins with creating a secret scope. A secret scope is collection of secrets identified by a name
+- Access secret scope from Databricks Homepage using #secrets/createScope at end of URL
 - create secret scope and link to Azure Key Vault using DNS name (Vault URI in Azure) and Resource ID
 
 ### Databricks Secrets Utility
-- dbutils.secrets utility offers many methods
+- dbutils.secrets utility offers several methods
 - list secret scopes
 - list secrets list within our scope
 - get values of the secrets with scope and key (Redacted and avoids hard coding or compromising secrets - useful for Git)
